@@ -32,12 +32,17 @@
     color: #fff;
     margin: 0 0 0 44px;
     cursor: pointer;
+    transition: all 0.1s;
+
 }
 
 .button:hover {
     transition: all 0.1s;
     box-shadow: 0 5px 10px rgba(29, 33, 38, 0.6), 0 1px 10px rgba(29, 33, 38, 0.1);
+    transform: translateY(-3px);
 }
 .button:active {
+    transform: translateY(-0px);
+    transition: all 0.1s;
     box-shadow: inset 0 5px 10px rgba(29, 33, 38, 0.6), 0 1px 10px rgba(29, 33, 38, 0.1);
 }

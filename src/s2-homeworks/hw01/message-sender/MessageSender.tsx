@@ -21,7 +21,7 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
-        // if (text !== '')
+        if (text !== '')
         setMessages([
             ...messages,
             {
