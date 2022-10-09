@@ -3,9 +3,13 @@
 }
 
 .hw {
-
+    padding: 24px 0 32px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .hwTitle {
-
+    padding: 107px 0 10px;
+    max-width: 1140px;
+    margin: 0 auto;
 }

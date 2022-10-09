@@ -3,11 +3,12 @@ import Message from './message/Message'
 import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
-import avatar from './avatar.png'
+import geralt from './geralt.png'
+import ciri from './ciri.png'
 
 /*
 * 1 - описать тип MessageType
-* 2 - описать тип MessagePropsType в файле Message.tsx
+* 2 - описать тип MessageProp``sType в файле Message.tsx
 * 3 - в файле Message.tsx отобразить приходящие данные
 * 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx
 * 5 - сделать стили в соответствии с дизайном
@@ -24,23 +25,23 @@ export type MessageType = {
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Geralt of Rivia',  // можно менять
+        avatar: geralt, // можно менять
+        name: 'Geralt',  // можно менять
     },
     message: {
-        text: 'If I have to choose between one evil and another, I prefer not to choose at all.', // можно менять
+        text: `If I have to choose between one evil and another, I prefer not to choose at all.`, // можно менять
         time: '22:00', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: ciri, // можно менять
+        name: 'Cirilla', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'Fairy tales cease to be fairy tales when they begin to be believed...', // можно менять
+        time: '22:02', // можно менять
     },
 }
 

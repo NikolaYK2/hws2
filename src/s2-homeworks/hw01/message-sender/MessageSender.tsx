@@ -21,6 +21,7 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
+        // if (text !== '')
         setMessages([
             ...messages,
             {
@@ -61,7 +62,6 @@ const MessageSender = (props: any) => {
                 <button
                     id={'hw1-button'}
                     className={s.button}
-
                     onClick={addMessage}
                 >
                     {/*текст кнопки могут изменить студенты*/}
