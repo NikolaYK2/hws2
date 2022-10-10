@@ -31,6 +31,7 @@
     border: none;
     color: #fff;
     margin: 0 0 0 44px;
+    box-shadow: 0 5px 20px rgba(29, 33, 38, 0.03), 0 1px 2px rgba(29, 33, 38, 0.1);
     cursor: pointer;
     transition: all 0.1s;
 
@@ -39,7 +40,7 @@
 .button:hover {
     transition: all 0.1s;
     box-shadow: 0 5px 10px rgba(29, 33, 38, 0.6), 0 1px 10px rgba(29, 33, 38, 0.1);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
 }
 .button:active {
     transform: translateY(-0px);
