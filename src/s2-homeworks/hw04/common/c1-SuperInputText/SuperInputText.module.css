@@ -1,7 +1,13 @@
 .input:focus {
 }
 .inputWrapper {
+    margin: 0 12px 0 0;
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    font-weight: 400;
 }
+
+
 .input {
     max-width: 372px;
     min-width: 100px;
@@ -13,14 +19,15 @@
 
 
 
-.superInput {
-}
-
 .errorInput {
+    border: 1px solid red;
+    outline: red;
 }
 
 .errorInput:focus {
+    border: 2px solid red;
 }
 
-.error {
+.error{
+    color: red;
 }

@@ -21,7 +21,7 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
-        if (text !== '')
+        if (text.trim() !== '')
         setMessages([
             ...messages,
             {
@@ -37,7 +37,7 @@ const MessageSender = (props: any) => {
     }
 
     const onKeyDown = (e: any) => {
-        e.key === 'Enter' && e.shiftKey && addMessage()
+            e.key === 'Enter' && e.shiftKey && addMessage()
     }
 
     return (

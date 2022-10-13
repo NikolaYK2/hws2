@@ -1,12 +1,13 @@
 .stand {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
+    align-items: start;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
+    align-self: start;
     flex: 0 1 372px;
     gap: 48px;
 }
