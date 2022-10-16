@@ -27,7 +27,6 @@
         color: #000;
         padding: 8px 13px;
         position: relative;
-        z-index: 4;
         margin: 0 0 0 13px;
     }
     .friendText:after {
