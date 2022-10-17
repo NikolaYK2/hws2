@@ -91,7 +91,7 @@
     position: fixed;
     display: inline-block;
     top: 22px;
-    right: 22px;
+    left: -50px;
     background: transparent;
     border: none;
     width: 30px;
