@@ -60,7 +60,7 @@
 .nav {
     display: flex;
     flex-direction: column;
-    min-width: 320px;
+    min-width: 317px;
     flex: 0 1 auto;
     transform: translateX(-317px);
     background-color: #fff;

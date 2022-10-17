@@ -1,11 +1,14 @@
 .button {
-    padding: 5px 24px;
+    padding: 7.34px 24px;
+    margin: 0 0 10px 0;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     color: #fff;
     transition: all 0.4s;
-
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .disabled {

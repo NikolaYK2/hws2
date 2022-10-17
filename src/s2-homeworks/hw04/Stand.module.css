@@ -1,6 +1,6 @@
 .stand {
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     align-items: start;
 }
 
@@ -9,7 +9,7 @@
     flex-direction: column;
     align-self: start;
     flex: 0 1 372px;
-    gap: 48px;
+    gap: 32px;
 }
 
 .buttons {
