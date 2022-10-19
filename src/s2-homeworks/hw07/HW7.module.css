@@ -1,2 +1,6 @@
 .container {
+    display: flex;
+}.container>div{
+    flex: 0 1 285px;
+    margin: 0 5px 0 0;
 }
