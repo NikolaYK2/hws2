@@ -1,33 +1,68 @@
+@keyframes radioHover {
+    0% {
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes radioActive {
+    0% {
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+        width: 15px;
+        min-width: 15px;
+        height: 15px;
+        border: 2px solid black;
+
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        width: 10px;
+        min-width: 10px;
+        height: 10px;
+        background-color: black;
+    }
+}
+
 .radio {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    background-color: #fff;
+    margin: 0 13px 0 0;
     width: 20px;
     min-width: 20px;
     height: 20px;
-    margin: 0 13px 21px 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
 
 .radio::before {
-    content: '';
-    display: flex;
-    width: 20px;
-    height: 20px;
-    border: 2px solid red;
-    border-radius: 50%;
-    margin: 0 12px 24px 0;
+        content: '';
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        animation: radioHover 1 ease-in;
+    }
+    .radio:hover{
+        animation: radioHover .3s forwards;
+    }
+    .radio:checked:after {
+        position: absolute;
+        top: auto;
+        left: auto;
+        content: '';
+        border-radius: 50%;
+        animation: radioActive 0.5s ease-in forwards;
 }
 
-/*.label::before {*/
-/*    content: '';*/
-/*    display: flex;*/
-/*    width: 20px;*/
-/*    min-width: 20px;*/
-/*    height: 20px;*/
-/*    border: 2px solid #000000;*/
-/*    border-radius: 50%;*/
-/*    margin: 0 12px 0 0;*/
-/*}*/
 
-.span{
+.span {
     position: relative;
     display: block;
     font-family: Montserrat, sans-serif;
@@ -36,28 +71,31 @@
 }
 
 
-
 .label {
-    display: inline-flex;
-    /*align-items: center;*/
-    /*user-select: none;*/
-    /*margin: 0 0 24px;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin: 0 0 24px 0;
     cursor: pointer;
+
 }
 
-.label>input{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    /*user-select: none;*/
-    /*display: none;*/
-    /*display: flex;*/
-}
 
+/*.radio:after {*/
+/*    content: "";*/
+/*    width: 0.65em;*/
+/*    height: 0.65em;*/
+/*    border-radius: 50%;*/
+/*    transform: scale(0);*/
+/*    transition: 120ms transform ease-in-out;*/
+/*    box-shadow: inset 0 0 2px rgba(0, 0, 0, 1);*/
+/*}*/
 
 
 .options {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: start;*/
 }
