@@ -1,8 +1,9 @@
 
 .select {
+    position: relative;
     appearance: none;
     outline: none;
-    display: block;
+    display: inline-block;
     width: 100%;
     max-width: 165px;
     min-width: 120px;
@@ -16,70 +17,15 @@
 .select:focus{
     background: url("./chevron-up.svg")96%/10% no-repeat;
 }
-
-/*.selectContainer:after{*/
-/*    content: "🢗";*/
-/*    position: absolute;*/
-/*    top: 25%;*/
-/*    right: 9px;*/
-/*    width: 10px;*/
-/*    height: 6px;*/
-/*    pointer-events: none;*/
-/*    !*color: #000000;*!*/
-/*}*/
-/*.selectContainer:active:after{*/
-/*    content: "🢕";*/
-/*    top: 0;*/
-/*    right: 9px;*/
-/*    width: 10px;*/
-/*    height: 6px;*/
-/*    pointer-events: none;*/
-/*    !*color: #000000;*!*/
-/*}*/
-/*.select:focus.selectContainer:after {*/
-/*    content: '🢕';*/
-/*}*/
-
-
-.option{
-    /*height: 100px;*/
-    /*margin: 20px;*/
+select::-ms-expand{
+    display: none;
+}
+option{
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
 }
 .option:hover {
-
 }
-
-
-/*.selectContainer{*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*}*/
-
-/*.selectContainer .select {*/
-/*    display: block;*/
-/*    padding: 4px 3px 3px 5px;*/
-/*    margin: 0;*/
-/*    font: inherit;*/
-/*    outline:none; !* remove focus ring from Webkit *!*/
-/*    line-height: 1.2;*/
-/*    background: #000;*/
-/*    color:white;*/
-/*    border:0;*/
-/*    cursor: pointer;*/
-
-/*}*/
-
-/*.selectContainer:after {*/
-/*    content: "🢗";*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    font-size: 60%;*/
-/*    line-height: 30px;*/
-/*    padding: 0 7px;*/
-/*    background: #000;*/
-/*    color: white;*/
-/*    pointer-events: none;*/
-/*}*/
 
