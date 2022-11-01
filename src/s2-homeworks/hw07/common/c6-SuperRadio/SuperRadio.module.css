@@ -25,6 +25,15 @@
     }
 }
 
+.label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin: 0 0 24px 0;
+    cursor: pointer;
+}
+
 .radio {
     display: flex;
     align-items: center;
@@ -71,15 +80,6 @@
 }
 
 
-.label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    margin: 0 0 24px 0;
-    cursor: pointer;
-
-}
 
 
 /*.radio:after {*/
