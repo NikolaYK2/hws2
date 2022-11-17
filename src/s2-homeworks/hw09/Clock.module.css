@@ -1,14 +1,38 @@
 .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: 180px;
+
 }
 
 .clock {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .watch {
+    display: inline-block;
 }
 
 .watch strong {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
 }
 
-.more {
+.more{
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    gap: 5px;
+    max-width: 187px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 8px 0 27px;
 }
