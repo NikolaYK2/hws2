@@ -13,6 +13,11 @@ function Clock() {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
         stop();
+        // let timerId: number = window.setTimeout(function time()  {
+        //     setDate(new Date());
+        //     timerId = +setTimeout(time, 1000);
+        //     setTimerId(timerId);
+        // },1000);
         const timerId: number = window.setInterval(() => {
             setDate(new Date());
         },1000);
@@ -22,6 +27,7 @@ function Clock() {
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
             clearInterval(timerId);
+        //     clearTimeout(timerId);
             setTimerId(undefined);
     }
 
