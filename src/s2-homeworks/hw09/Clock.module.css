@@ -27,7 +27,6 @@
     display: flex;
     justify-content: start;
     flex-direction: row-reverse;
-    gap: 5px;
     max-width: 187px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -35,4 +34,7 @@
     font-size: 16px;
     color: rgba(0, 0, 0, 0.5);
     padding: 8px 0 27px;
+}
+.more span:first-child{
+    margin: 0 0 0 5px;
 }
