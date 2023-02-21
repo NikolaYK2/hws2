@@ -5,9 +5,9 @@
     outline: none;
     display: inline-block;
     width: 100%;
-    max-width: 165px;
+    max-width: 171px;
     min-width: 120px;
-    height: 24px;
+    height: 36px;
     padding: 0 10px;
     border-radius: 2px;
     border: 1px solid #C2C2C2;
@@ -28,4 +28,3 @@ option{
 }
 .option:hover {
 }
-
