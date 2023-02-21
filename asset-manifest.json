@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hws2/static/css/main.26801e92.css",
+    "main.css": "/hws2/static/css/main.01208349.css",
     "main.js": "/hws2/static/js/main.7af79012.js",
     "static/js/787.66cb4309.chunk.js": "/hws2/static/js/787.66cb4309.chunk.js",
     "static/media/ciri.png": "/hws2/static/media/ciri.b67a80b9e56ae565a41f.png",
@@ -12,14 +12,14 @@
     "static/media/checked.svg": "/hws2/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "index.html": "/hws2/index.html",
     "static/media/burger.svg": "/hws2/static/media/burger.e4e6b98e4ee0b2dfcd76d02a9eed2e34.svg",
-    "static/media/chevron-down.svg": "/hws2/static/media/chevron-down.8624f04faf16b2d07c00.svg",
-    "static/media/chevron-up.svg": "/hws2/static/media/chevron-up.21ead3be1dbf588b9fb7.svg",
-    "main.26801e92.css.map": "/hws2/static/css/main.26801e92.css.map",
+    "static/media/chevron-down.svg": "/hws2/static/media/chevron-down.1345dc05d200a4aa92db.svg",
+    "static/media/chevron-up.svg": "/hws2/static/media/chevron-up.65dcd1ffd735a318301e.svg",
+    "main.01208349.css.map": "/hws2/static/css/main.01208349.css.map",
     "main.7af79012.js.map": "/hws2/static/js/main.7af79012.js.map",
     "787.66cb4309.chunk.js.map": "/hws2/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26801e92.css",
+    "static/css/main.01208349.css",
     "static/js/main.7af79012.js"
   ]
 }
