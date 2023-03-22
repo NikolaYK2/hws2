@@ -2,8 +2,9 @@ import React, {useEffect} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {changeThemeId} from './bll/themeReducer'
+import {useAppSelector} from "../hw10/bll/store";
 
 /*
 * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -22,7 +23,8 @@ const HW12 = () => {
     // взять ид темы из редакса
     const dispatch = useDispatch();
     // const themeId = useSelector<any, StateInitStateType>(state => state.theme.themeId);
-    const themeId = useSelector<any, any>(state => state.theme.themeId);
+    // const themeId = useSelector<AppStoreType, StateInitStateType>(state => state.theme);
+    const themeId = useAppSelector<number>(state => state.theme.themeId);
 
 
     const change = (id: number) => { // дописать функцию
