@@ -1,7 +1,10 @@
 .tech {
-
+    line-height: 24px;
 }
 
 .loading {
-
+    text-align: right;
+    margin: 0 12px 0 0;
+    max-width: 372px;
+    color: rgba(77, 77, 77, 0.7);
 }
