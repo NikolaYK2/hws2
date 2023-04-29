@@ -52,10 +52,13 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                console.log(res!.data)
+                setTechs(res!.data.techs);
+                setTotalCount(res!.data.totalCount);
                 // сохранить пришедшие данные
-
+                localStorage.setItem('techs', JSON.stringify(res!.data.techs));
                 //
+                setLoading(false);
             })
     }
 
@@ -63,23 +66,53 @@ const HW15 = () => {
         // делает студент
 
         // setPage(
+        setPage(newPage);
+
         // setCount(
+        setCount(newCount);
 
         // sendQuery(
-        // setSearchParams(
+        sendQuery({page: newPage, count: newCount})
 
+        // setSearchParams(
+        setSearchParams();
         //
     }
 
+    let stringTechs = localStorage.getItem('techs');
+    let defaultTechs: TechType[] = []
+    if (stringTechs) {
+        defaultTechs = JSON.parse(stringTechs)
+    }
     const onChangeSort = (newSort: string) => {
         // делает студент
 
         // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort);
+        // let stringTechs = localStorage.getItem('techs');
+        //
+        //
+        // if (stringTechs) {
+        //     let a = JSON.parse(stringTechs!);
+        // }
+
+
+        const resultSort = (a: any, b: any) => a.tech.localeCompare(b.tech);
+        setTechs(
+            sort === '1tech' ? techs.sort(resultSort)
+                : sort === '' ? techs.sort(resultSort).reverse()
+                    : sort === '0tech' ? defaultTechs
+                        : techs
+        )
+
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
         // sendQuery(
-        // setSearchParams(
+        // sendQuery({sort: newSort});
 
+
+        // setSearchParams(
+        setSearchParams();
         //
     }
 
@@ -104,7 +137,7 @@ const HW15 = () => {
 
     return (
         <div id={'hw15'}>
-            <div className={s2.hwTitle}>Homework #15</div>
+            <div className={s2.hwTitle}><span className={s2.hwTitleSpan}>Homework #15</span></div>
 
             <div className={s2.hw}>
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
