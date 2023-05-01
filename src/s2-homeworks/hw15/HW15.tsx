@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {saveState} from "../hw06/localStorage/localStorage";
 
 /*
 * 1 - дописать SuperPagination
@@ -52,12 +53,12 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-                console.log(res!.data)
-                setTechs(res!.data.techs);
-                setTotalCount(res!.data.totalCount);
-                // сохранить пришедшие данные
-                localStorage.setItem('techs', JSON.stringify(res!.data.techs));
-                //
+                if(res) {
+                    setTechs(res.data.techs);
+                    setTotalCount(res.data.totalCount);
+                    // сохранить пришедшие данные
+                    saveState<TechType[]>('techs', res.data.techs);
+                }
                 setLoading(false);
             })
     }
@@ -65,55 +66,32 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
         setPage(newPage);
 
-        // setCount(
         setCount(newCount);
 
-        // sendQuery(
-        sendQuery({page: newPage, count: newCount})
-
-        // setSearchParams(
-        setSearchParams();
-        //
+        const pageQ: {page?: string} = newPage !== 1 ? {page: newPage + ''} : {}
+        const countQ: {count?:string} = newCount !== 4 ? {count: newCount + ''} : {}
+        const {count, page, ...lastQ} = Object.fromEntries(searchParams)
+        const allQ = {...lastQ, ...pageQ, ...countQ}
+        setSearchParams(allQ);
+        sendQuery(allQ)
     }
 
-    let stringTechs = localStorage.getItem('techs');
-    let defaultTechs: TechType[] = []
-    if (stringTechs) {
-        defaultTechs = JSON.parse(stringTechs)
-    }
+    // let stringTechs = localStorage.getItem('techs');
+    // let defaultTechs: TechType[] = []
+    // if (stringTechs) {
+    //     defaultTechs = JSON.parse(stringTechs)
+    // }
+
     const onChangeSort = (newSort: string) => {
-        // делает студент
-
-        // setSort(
         setSort(newSort);
-        // let stringTechs = localStorage.getItem('techs');
-        //
-        //
-        // if (stringTechs) {
-        //     let a = JSON.parse(stringTechs!);
-        // }
-
-
-        const resultSort = (a: any, b: any) => a.tech.localeCompare(b.tech);
-        setTechs(
-            sort === '1tech' ? techs.sort(resultSort)
-                : sort === '' ? techs.sort(resultSort).reverse()
-                    : sort === '0tech' ? defaultTechs
-                        : techs
-        )
-
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // sendQuery({sort: newSort});
-
-
-        // setSearchParams(
-        setSearchParams();
-        //
+        const sortQ: {sort?: string} = newSort !== '' ? {sort: newSort} : {}
+        const {sort, ...lastQ} = Object.fromEntries(searchParams)
+        const allQ = {...lastQ, ...sortQ}
+        setSearchParams(allQ);
     }
 
     useEffect(() => {
