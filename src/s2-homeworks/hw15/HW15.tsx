@@ -79,19 +79,12 @@ const HW15 = () => {
         sendQuery(allQ)
     }
 
-    // let stringTechs = localStorage.getItem('techs');
-    // let defaultTechs: TechType[] = []
-    // if (stringTechs) {
-    //     defaultTechs = JSON.parse(stringTechs)
-    // }
-
     const onChangeSort = (newSort: string) => {
         setSort(newSort);
         setPage(1) // при сортировке сбрасывать на 1 страницу
-
         const sortQ: {sort?: string} = newSort !== '' ? {sort: newSort} : {}
         const {sort, ...lastQ} = Object.fromEntries(searchParams)
-        const allQ = { ...sortQ, ...lastQ}
+        const allQ = {...sortQ, ...lastQ}
         setSearchParams(allQ);
         sendQuery(allQ);
     }
