@@ -54,6 +54,7 @@ const HW15 = () => {
             .then((res) => {
                 // делает студент
                 if(res) {
+                    console.log(res)
                     setTechs(res.data.techs);
                     setTotalCount(res.data.totalCount);
                     // сохранить пришедшие данные
@@ -90,8 +91,9 @@ const HW15 = () => {
 
         const sortQ: {sort?: string} = newSort !== '' ? {sort: newSort} : {}
         const {sort, ...lastQ} = Object.fromEntries(searchParams)
-        const allQ = {...lastQ, ...sortQ}
+        const allQ = { ...sortQ, ...lastQ}
         setSearchParams(allQ);
+        sendQuery(allQ);
     }
 
     useEffect(() => {
