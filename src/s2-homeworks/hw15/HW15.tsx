@@ -6,6 +6,7 @@ import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
 import {saveState} from "../hw06/localStorage/localStorage";
+import {Loader} from "../hw10/Loader";
 
 /*
 * 1 - дописать SuperPagination
@@ -54,7 +55,6 @@ const HW15 = () => {
             .then((res) => {
                 // делает студент
                 if(res) {
-                    console.log(res)
                     setTechs(res.data.techs);
                     setTotalCount(res.data.totalCount);
                     // сохранить пришедшие данные
@@ -113,7 +113,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}><span className={s2.hwTitleSpan}>Homework #15</span></div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}>{/*Loading...*/}<Loader/></div>}
 
                 <SuperPagination
                     page={page}
